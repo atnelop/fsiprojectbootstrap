@@ -1,0 +1,129 @@
+/* Configurações globais e correção do rodapé */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  background: url('../img/serra.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+main.container-fluid {
+  flex: 1 0 auto; /* Força o conteúdo principal a empurrar o rodapé para baixo */
+}
+
+footer.footer {
+  flex-shrink: 0; /* Impede que o rodapé encolha */
+}
+
+
+/* Cabeçalho fixo no topo */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 5px 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.top-header h1 {
+  font-size: 1.2em;
+  margin: 2px 0;
+  font-family: 'Cinzel', serif;
+  color: #e8b809;
+  letter-spacing: 1px;
+}
+
+.top-header h2 {
+  font-size: 0.8em;
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  color: #e8b809;
+}
+
+/* Estilos da Sidebar */
+.sidebar-content {
+  background: rgba(30, 30, 30, 0.9);
+  position: sticky;
+  top: 90px;
+}
+
+/* Logo */
+.logo img {
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 80%;
+}
+
+.cardapio-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* Ajustes nos links de navegação do Bootstrap */
+.menu .nav-link {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: opacity 0.3s;
+}
+
+.menu .nav-link:hover {
+  opacity: 0.8;
+}
+
+/* Estilo para o link ATIVO */
+.menu .nav-link.active {
+  background-color: rgba(255, 206, 0, 0.3) !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+
+/* Blocos de seção */
+.box {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.box h2 {
+  font-family: 'Cinzel', serif;
+  color: #cc9900;
+  margin-top: 0;
+  border-bottom: 1px solid #cc9900;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Esconde a área de conteúdo por padrão e prepara uma transição */
+#menu-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+/* Estilização do Modal */
+.modal-content {
+  background-color: rgba(10, 10, 10, 0.9);
+  border: 1px solid #cc9900;
+  color: #fff;
+}
+
+/* Rodapé (estilo visual) */
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+  background-color: rgba(0,0,0,0.8);
+}
